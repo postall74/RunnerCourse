@@ -41,7 +41,7 @@ public class GameStartScreen : MonoBehaviour
     {
         Debug.Log("Start button click");
         Time.timeScale = 1.0f;
-        _startGameGroup.alpha = 0f;
+        _startGameGroup.gameObject.SetActive(false);
     }
 
     private void OnExitButtonClick()

@@ -6,7 +6,7 @@ using UnityEngine;
 public class HealthBar : MonoBehaviour
 {
     [SerializeField] private Player _player;
-    [SerializeField] private HealthIcon _healthTemplate;
+    [SerializeField] private HealthIcon _healthIcon;
 
     private List<HealthIcon> _healthIcons = new List<HealthIcon>();
 
@@ -50,7 +50,7 @@ public class HealthBar : MonoBehaviour
 
     private void CreateHealthIcon()
     {
-        HealthIcon newHealthIcon = Instantiate(_healthTemplate, transform);
+        HealthIcon newHealthIcon = Instantiate(_healthIcon, transform);
         _healthIcons.Add(newHealthIcon.GetComponent<HealthIcon>());
         newHealthIcon.ToFill();
     }
