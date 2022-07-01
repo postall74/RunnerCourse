@@ -10,8 +10,9 @@ public class GameStartScreen : MonoBehaviour
     [SerializeField] private Button _startButton;
     [SerializeField] private Button _exitButton;
     [SerializeField] private Button _aboutButton;
+    [SerializeField] private CanvasGroup _imageInfo;
 
-    private CanvasGroup _startGameScreen;
+    private CanvasGroup _startGameGroup;
 
     private void OnEnable()
     {
@@ -30,26 +31,29 @@ public class GameStartScreen : MonoBehaviour
 
     private void Start()
     {
-        _startGameScreen = GetComponent<CanvasGroup>();
+        _startGameGroup = GetComponent<CanvasGroup>();
         Time.timeScale = 0f;
-        _startGameScreen.alpha = 1.0f;
+        _startGameGroup.alpha = 1.0f;
+
     }
 
     private void OnStartButtonClick()
     {
         Debug.Log("Start button click");
         Time.timeScale = 1.0f;
-        _startGameScreen.alpha = 0f;
-        SceneManager.LoadScene(0);
-
+        _startGameGroup.alpha = 0f;
     }
+
     private void OnExitButtonClick()
     {
         Application.Quit();
     }
     private void OnAboutButtonClick()
     {
-
+        if (_imageInfo.alpha == 0f)
+            _imageInfo.alpha = 1.0f;
+        else
+            _imageInfo.alpha = 0f;
     }
 
 }
