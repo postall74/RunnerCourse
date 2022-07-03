@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
     {
         if (collision.TryGetComponent<Player>(out Player player))
         {
-            player.ApllyDamage(_damage);
+            player.TakeDamage(_damage);
         }
 
         Die(); 
