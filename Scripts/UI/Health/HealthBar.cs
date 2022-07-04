@@ -17,18 +17,12 @@ public class HealthBar : MonoBehaviour
 
     private void OnDisable() => _player.HealthChanged -= OnHealthChanged;
 
-    private void Start()
-    {
-        _healthSlider = GetComponent<Slider>();
-    }
+    private void Start() => _healthSlider = GetComponent<Slider>();
 
     private void OnHealthChanged(int health)
     {
-        if (_healthSlider != null && _coroutineHealthChanged != null)
-        {
-            StopCoroutine(HealthChange(health));
-            _coroutineHealthChanged = null;
-        }
+        if (_coroutineHealthChanged != null)
+            StopCoroutine(_coroutineHealthChanged);
 
         _coroutineHealthChanged = StartCoroutine(HealthChange(health));
     }
@@ -36,15 +30,12 @@ public class HealthBar : MonoBehaviour
     private IEnumerator HealthChange(float targetHealth)
     {
         float normalizeTargetHealth = targetHealth / _player.MaxHealth;
-        float normalizeCurrentHealth = _healthSlider.value;
 
-        while (normalizeCurrentHealth != normalizeTargetHealth)
+        while (_healthSlider.value != normalizeTargetHealth)
         {
-            normalizeCurrentHealth = Mathf.MoveTowards(_healthSlider.value, normalizeTargetHealth, _speedChange * Time.deltaTime);
-            _healthSlider.value = normalizeCurrentHealth;
+            _healthSlider.value = Mathf.MoveTowards(_healthSlider.value, normalizeTargetHealth, _speedChange * Time.deltaTime);
             yield return null;
         }
-
     }
 }
 
