@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2727907323346889985}
   - component: {fileID: 2727907323346889984}
-  - component: {fileID: 8666725797415112960}
   - component: {fileID: 2198564596069510015}
   - component: {fileID: 3344603638663461846}
   - component: {fileID: 2727907323346889991}
@@ -91,32 +90,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8666725797415112960
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2727907323346889988}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.09915066, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4, y: 2.36}
-    newSize: {x: 1, y: 0.59}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.4483013, y: 2.36}
-  m_EdgeRadius: 0
 --- !u!60 &2198564596069510015
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -146,7 +119,7 @@ PolygonCollider2D:
       - {x: 0.5833213, y: -0.6743071}
       - {x: 0.7322421, y: -0.30024362}
       - {x: 1.7478523, y: -0.20668817}
-      - {x: 2.0723455, y: -0.17063348}
+      - {x: 1.8127387, y: -0.123432085}
       - {x: 1.4656496, y: -0.011755705}
       - {x: 0.9276962, y: 0.0863986}
       - {x: 0.6647978, y: 0.1343534}
@@ -211,7 +184,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0532695e3deaf2147a335cd948d681ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 3
+  _maxHealth: 100
+  _minHealth: 0
 --- !u!114 &2727907323346889990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbe5b30907e6c9845bbe7e1e05c0418c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 5
+  _moveSpeed: 3
   _stepSize: 3.5
   _maxHeight: 3.5
   _minHeight: -3.5
