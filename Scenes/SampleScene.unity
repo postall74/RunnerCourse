@@ -1765,7 +1765,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2886,7 +2886,7 @@ MonoBehaviour:
       - m_Target: {fileID: 567894986}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: TakeHealth
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3129,7 +3129,7 @@ MonoBehaviour:
       - m_Target: {fileID: 567894986}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: TakeDamage
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3931,26 +3931,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2154780569907954075, guid: a9480507bd637044f932dbfca7f2e4c4, type: 3}
-      propertyPath: _stepSize
-      value: 3.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2154780569907954075, guid: a9480507bd637044f932dbfca7f2e4c4, type: 3}
-      propertyPath: _maxHeight
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2154780569907954075, guid: a9480507bd637044f932dbfca7f2e4c4, type: 3}
-      propertyPath: _minHeight
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2198564596069510015, guid: a9480507bd637044f932dbfca7f2e4c4, type: 3}
-      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].x
-      value: 1.8127387
-      objectReference: {fileID: 0}
-    - target: {fileID: 2198564596069510015, guid: a9480507bd637044f932dbfca7f2e4c4, type: 3}
-      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].y
-      value: -0.123432085
-      objectReference: {fileID: 0}
     - target: {fileID: 2727907323346889985, guid: a9480507bd637044f932dbfca7f2e4c4, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3998,26 +3978,6 @@ PrefabInstance:
     - target: {fileID: 2727907323346889988, guid: a9480507bd637044f932dbfca7f2e4c4, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 2727907323346889990, guid: a9480507bd637044f932dbfca7f2e4c4, type: 3}
-      propertyPath: _moveSpeed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2727907323346889991, guid: a9480507bd637044f932dbfca7f2e4c4, type: 3}
-      propertyPath: _health
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2727907323346889991, guid: a9480507bd637044f932dbfca7f2e4c4, type: 3}
-      propertyPath: _maxHealth
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 2727907323346889991, guid: a9480507bd637044f932dbfca7f2e4c4, type: 3}
-      propertyPath: _healthChange
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6001656425017648471, guid: a9480507bd637044f932dbfca7f2e4c4, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9480507bd637044f932dbfca7f2e4c4, type: 3}
